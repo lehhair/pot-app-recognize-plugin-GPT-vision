@@ -1,37 +1,59 @@
 {
-  "id": "[plugin].com.pot-app.ocrspace",
+  "id": "gpt-vision.com.pot-app.ocrspace",
   "plugin_type": "recognize",
   "icon": "icon.png",
-  "display": "OCR Space",
-  "homepage": "https://github.com/pot-app/pot-app-recognize-plugin-template",
+  "display": "GPT vision",
+  "homepage": "https://github.com/lehhair/pot-app-recognize-plugin-template",
   "needs": [
     {
-      "key": "engine",
-      "display": "Engine",
-      "type": "select",
-      "options": { "1": "Engine 1", "2": "Engine 2", "3": "Engine 3" }
+      "key": "apikey",
+      "display": "API Key",
+      "type": "input"
     },
-    { "key": "apikey", "display": "Api Key", "type": "input" }
+    {
+      "key": "endpoint",
+      "display": "API Endpoint",
+      "type": "input"
+    },
+    {
+      "key": "model",
+      "display": "Model",
+      "type": "input"
+    },
+    {
+      "key": "prompt",
+      "display": "Prompt",
+      "type": "input"
+    },
+    {
+      "key": "stream",
+      "display": "Stream",
+      "type": "select",
+      "options": {
+        "true": "True",
+        "false": "False"
+      }
+    }
   ],
   "language": {
-    "auto": "eng",
-    "zh_cn": "chs",
-    "zh_tw": "cht",
-    "en": "eng",
-    "ja": "jpn",
-    "ko": "kor",
-    "fr": "fre",
-    "es": "spa",
-    "ru": "rus",
-    "de": "ger",
-    "it": "ita",
-    "tr": "tur",
-    "pt_pt": "por",
-    "pt_br": "por",
-    "vi": "vie",
-    "th": "tai",
-    "ar": "ara",
-    "hi": "hin",
-    "fa": "per"
+    "auto": "auto",
+    "zh_cn": "zh",
+    "zh_tw": "zh-TW",
+    "en": "en",
+    "ja": "ja",
+    "ko": "ko",
+    "fr": "fr",
+    "es": "es",
+    "ru": "ru",
+    "de": "de",
+    "it": "it",
+    "tr": "tr",
+    "pt_pt": "pt",
+    "pt_br": "pt",
+    "vi": "vi",
+    "th": "th",
+    "ar": "ar",
+    "hi": "hi",
+    "fa": "fa"
   }
 }
