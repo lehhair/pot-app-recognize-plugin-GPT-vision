@@ -17,7 +17,7 @@ pub fn recognize(
 
     let endpoint = match needs.get("endpoint") {
         Some(endpoint) => endpoint.to_string(),
-        None => "https://one.lehhair.net/v1/chat/completions".to_string(),
+        None => "https://api.openai.com/v1/chat/completions".to_string(),
     };
 
     let model = match needs.get("model") {
