@@ -17,7 +17,7 @@ pub fn recognize(
 
     let endpoint = match needs.get("endpoint") {
         Some(endpoint) => endpoint.to_string(),
-        None => "https://api.openai.com/v1/chat/completions".to_string(),
+        None => "https://one.lehhair.net/v1/chat/completions".to_string(),
     };
 
     let model = match needs.get("model") {
@@ -26,8 +26,8 @@ pub fn recognize(
     };
 
     let prompt = match needs.get("prompt") {
-        Some(prompt) => prompt.to_string(),
-        None => "".to_string(),
+        Some(prompt) => format!("{}\nOutput Language:{}", prompt, lang),
+        None => format!("Output Language:{}", lang),
     };
 
     let stream = match needs.get("stream") {
@@ -67,6 +67,7 @@ pub fn recognize(
 
     let response: Value = client
         .post(&endpoint)
+        .header("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36")
         .header("Accept", "application/json, text/event-stream")
         .header("Content-Type", "application/json")
         .header("authorization", format!("Bearer {}", apikey))
