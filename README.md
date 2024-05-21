@@ -16,6 +16,10 @@ or
 
 Prompt: Please analyze the provided image, perform OCR to extract all text content, and describe the main content of the image. Return the result in Chinese. The OCR content should be at the beginning, in its original form, followed by the explanation in `Chinese`.
 
+or
+
+Prompt: Analyze the image, perform OCR to extract all text in [brackets], translate the text in [brackets], and describe the main content in Chinese, separated by ---.(推荐)
+
 这里输出语言可以自行选择，也可以保持原文，看你喜好
 
 Stream: False (首先这里true没有应用场景，其次会报错，仅作预留)
