@@ -33,6 +33,11 @@
         "true": "True",
         "false": "False"
       }
+    },
+    {
+      "key": "timeout",
+      "display": "Timeout (seconds)",
+      "type": "input"
     }
   ],
   "language": {
