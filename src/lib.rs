@@ -2,6 +2,7 @@ use serde_json::{json, Value};
 use std::collections::HashMap;
 use std::error::Error;
 use std::io::Cursor;
+use std::time::Duration;
 use image::{GenericImageView, ImageOutputFormat};
 use base64::{Engine as _, engine::general_purpose};
 
@@ -11,7 +12,9 @@ pub fn recognize(
     lang: &str,                     // 识别语言
     needs: HashMap<String, String>, // 插件需要的其他参数,由info.json定义
 ) -> Result<Value, Box<dyn Error>> {
-    let client = reqwest::blocking::ClientBuilder::new().build()?;
+    let client = reqwest::blocking::ClientBuilder::new()
+        .timeout(Duration::from_secs(180)) // 设置超时时间为180秒
+        .build()?;
 
     let apikey = match needs.get("apikey") {
         Some(apikey) => apikey.to_string(),
