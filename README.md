@@ -2,6 +2,8 @@
 
 通过调用GPT-vision模型对图片进行识别
 
+使用说明，从release下载解压后需要重命名成`[plugin].com.pot-app.ocrspace.potext.potext`才能安装
+
 你可以这样填写参数
 
 API KEY: sk-xxxxx
